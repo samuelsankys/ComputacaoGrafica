@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+
+	<title>
+		Computação Gráfica - UNIVASF
+	</title>
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+		integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+
+</head>
+
+<body id="body">
+	<div id="menu" class="">
+		<nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+			<a class="navbar-brand" href="#">Computação Gráfica</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link ml-5" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="trabalho.html">Atividades</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="equipe.html">Equipe</a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<br />
+	<div class="">
+
+		<ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+					aria-selected="true">DDA</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+					aria-controls="profile" aria-selected="false">Bresenham</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+					aria-controls="contact" aria-selected="false">Círculo Simples</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contactu" role="tab"
+					aria-controls="contactu" aria-selected="false">Círculo Ponto médio</a>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+
+
+			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+				<div class="container d-flex justify-content-center">
+
+					<div class="">
+						<svg id=quadro class="shadow mt-3" width="500" height="500">
+
+							<!-- Neste espaço onde o JS incluirá os comando svg-->
+							<!-- Para verificar clique com botão direito no navegador e selecione inspecionar/ clique nas setas para encontrar a tag SVG-->
+						</svg>
+					</div>
+
+
+					<form class="">
+						<div class="rows d-flex justify-content-end">
+
+							<div class="col-sm-5">
+								<div class="form-group">
+									<label>Position x1</label>
+									<input type="text" id="x0" class=" form-control form-control-sm"
+										placeholder="X inicial">
+								</div>
+								<div class="form-group">
+									<label>Position y1</label>
+									<input type="text" id="y0" class="form-control form-control-sm"
+										placeholder="Y inicial">
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<div class="form-group">
+									<label>Position x2</label>
+									<input type="text" id="x1" class="form-control form-control-sm"
+										placeholder="X final">
+								</div>
+								<div class="form-group">
+									<label>Position y2</label>
+									<input type="text" id="y1" class="form-control form-control-sm"
+										placeholder="Y final">
+								</div>
+							</div>
+						</div>
+						<div class="row d-flex justify-content-end">
+							<button type="button" onclick="DDA()" class="btn btn-primary">Gerar</button>
+							<button type="button" onclick="clearquadro()" class="btn btn-dark">Limpar</button>
+						</div>
+					</form>
+
+				</div>
+
+
+
+			</div>
+
+			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+				<p>asldkjaslkdjalksjdlkasjlkdjaksd</p>
+
+			</div>
+			<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+			<div class="tab-pane fade" id="contactu" role="tabpanel" aria-labelledby="contact-tab">...</div>
+
+
+
+		</div>
+	</div>
+
+	<button type="submit" onclick="bresenham()" class="btn btn-danger">Bresenham</button>
+	<button type="submit" onclick="circle(50, 100, 100)" class="btn btn-success">Cículo Simples</button>
+	<button type="submit" onclick="midPointCircleDraw(68, 90, 50)" class="btn btn-primary">Círculo do Ponto
+		Médio</button>
+
+
+
+
+
+</body>
+<script>
+	function DDA() {
+		var X1 = parseInt(document.getElementById("x0").value) // x inicial
+		var Y1 = parseInt(document.getElementById("y0").value) // y inicial
+		var X2 = parseInt(document.getElementById("x1").value) // x final
+		var Y2 = parseInt(document.getElementById("y1").value) // y final
+
+		console.log(X1)
+		console.log(Y1)
+		console.log(X2)
+		console.log(Y2)
+
+		var step;
+		var X, Y, Xinc, Yinc;
+		step = Math.abs(X2 - X1);
+		if (Math.abs(Y2 - Y1) > step)
+
+			step = Math.abs(Y2 - Y1);
+		Xinc = (X2 - X1) / step;
+		Yinc = (Y2 - Y1) / step;
+		X = X1;
+		console.log("valor de x")
+		console.log(X)
+		Y = Y1;
+		console.log("valor de y")
+		console.log(Y)
+
+		while (X < X2) {
+			putpixel(Math.round(X), Math.round(Y));
+
+			X = X + Xinc;
+			Y = Y + Yinc;
+			console.log(X, "Vaor de  x")
+			console.log(Y, "valor de y")
+		}
+	}
+
+	function bresenham() {
+
+		var x1 = parseInt(document.getElementById("x0").value)
+		var y1 = parseInt(document.getElementById("y0").value)
+		var x2 = parseInt(document.getElementById("x1").value)
+		var y2 = parseInt(document.getElementById("y1").value)
+
+		var dx, dy, p, p2, xy2, x, y, xf;
+		dx = x2 - x1;
+		dy = y2 - y1;
+		p = 2 * dy - dx;
+		p2 = 2 * dy;
+		xy2 = 2 * (dy - dx);
+		if (x1 > x2) {
+			x = x2;
+			y = y2;
+			xf = x1;
+		} else {
+			x = x1;
+			y = y1;
+			xf = x2;
+		}
+		putpixel(x, y);
+		while (x < xf) {
+			x++;
+			if (p < 0)
+				p += p2;
+			else {
+				y++;
+				p += xy2;
+			}
+			putpixel(x, y);
+		}
+	}
+
+
+	function midPointCircleDraw(x_centre, y_centre, r) {
+		var x = r, y = 0;
+		var a, b, c, d, e, f, g, h;
+
+		// Printing the initial point on the axes 
+		// after translation 
+		a = x + x_centre;
+		b = y + y_centre;
+		CirclePoints(a, b);
+
+		// When radius is zero only a single 
+		// point will be printed 
+		if (r > 0) {
+			a = x + x_centre;
+			b = -y + y_centre;
+			CirclePoints(a, b);
+			c = y + x_centre;
+			d = x + y_centre;
+			CirclePoints(c, d);
+			e = -y + x_centre;
+			f = x + y_centre;
+			CirclePoints(e, f);
+		}
+
+		// Initialising the value of P 
+		var P = 1 - r;
+		while (x > y) {
+			y++;
+
+			// Mid-point is inside or on the perimeter 
+			if (P <= 0)
+				P = P + 2 * y + 1;
+
+			// Mid-point is outside the perimeter 
+			else {
+				x--;
+				P = P + 2 * y - 2 * x + 1;
+			}
+
+			// All the perimeter points have already been printed 
+			if (x < y)
+				break;
+
+			// Printing the generated point and its reflection 
+			// in the other octants after translation 
+			a = x + x_centre;
+			b = y + y_centre;
+			CirclePoints(a, b);
+			c = -x + x_centre;
+			d = y + y_centre;
+			CirclePoints(c, d);
+			e = x + x_centre;
+			f = -y + y_centre;
+			CirclePoints(e, f);
+			g = -x + x_centre;
+			h = -y + y_centre;
+			CirclePoints(g, h);
+
+			// If the generated point is on the line x = y then 
+			// the perimeter points have already been printed 
+			if (x != y) {
+				a = y + x_centre;
+				b = x + y_centre;
+				CirclePoints(a, b);
+				c = -y + x_centre;
+				d = x + y_centre;
+				CirclePoints(c, d);
+				e = y + x_centre;
+				f = -x + y_centre;
+				CirclePoints(e, f);
+				g = -y + x_centre;
+				h = -x + y_centre;
+				CirclePoints(g, h);
+			}
+		}
+	}
+
+	function clearquadro() {
+		var element = document.getElementById('quadro');
+		element.innerHTML = ""
+
+	}
+
+
+
+	function circle(radius, xmiddle, ymiddle) {
+		for (var i = 0; i <= 360; i++) {
+			x = parseInt(xmiddle + (radius * Math.sin(i * 2 * (Math.PI / 360))) + 0.5)
+			y = parseInt(ymiddle + (radius * Math.cos(i * 2 * (Math.PI / 360))) + 0.5)
+			CirclePoints(x, y)
+		}
+	}
+
+	function putpixel(x, y) {
+		var element = document.getElementById('quadro');
+		element.innerHTML += "<rect x=" + x + " y=" + y + " width=" + "3" + " height=" + "3" + " style='stroke:black' " + "/>"
+	}
+
+
+	function CirclePoints(x, y) {
+		var element = document.getElementById('quadro');
+		element.innerHTML += "<rect x=" + x + " y=" + y + " width=" + "3" + " height=" + "3" + " style='stroke:black' " + "/>"
+	}
+
+</script>
+
+</html>

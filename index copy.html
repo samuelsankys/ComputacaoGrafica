@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<title>
+		Escolinha gráfica
+	</title>
+
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+
+
+
+</head>
+
+<body id="body">
+	
+
+
+
+</body>
+<script>
+d3.select("body")
+Pt {_groups: Array(1), _parents: Array(1)}_groups: [Array(1)]0: Array(1)0: body#bodylength: 1__proto__: Array(0)length: 1__proto__: Array(0)_parents: [html]__proto__: Object
+document.querySelector("body")
+<body id=​"body">​…​</body>​
+d3.select("body").append("svg")
+Pt {_groups: Array(1), _parents: Array(1)}
+d3.select("body").append("samuel")
+Pt {_groups: Array(1), _parents: Array(1)}
+d3.select("body").select("svg").attr("width",500)
+Pt {_groups: Array(1), _parents: Array(1)}
+svg = d3.select("body").select("svg").attr("width",500)
+Pt {_groups: Array(1), _parents: Array(1)}
+svg.attr("height",300)
+Pt {_groups: Array(1), _parents: Array(1)}
+coord = [{x: 40, y: 29},{x: 10, y: 15}]
+(2) [{…}, {…}]0: {x: 40, y: 29}1: {x: 10, y: 15}length: 2__proto__: Array(0)
+svg.selectAll("rect").data(coord).enter().append("rect").attr("x",function(d){return d.x}).attr("y",function(d){return d.y}).attr("width", 10).attr("height", 10)
+Pt {_groups: Array(1), _parents: Array(1)}
+x = d3.scaleLinear().domain([0,50]).range([0,500])
+ƒ l(n){return isNaN(n=+n)?e:(i||(i=r(a.map(t),u,c)))(t(f(n)))}
+x(2)
+20
+function drawPixel(coord){svg.selectAll("rect").data(coord).enter().append("rect").attr("x",function(d){return d.x}).attr("y",function(d){return d.y}).attr("width", 10).attr("height", 10)}
+undefined
+drawPixel(coord)
+undefined
+listPixel = []
+[]
+function drawPixel(coord){listPixel = listPixel.concat(coord); svg.selectAll("rect").data(listPixel).enter().append("rect").attr("x",function(d){return d.x}).attr("y",function(d){return d.y}).attr("width", 10).attr("height", 10)}
+undefined
+drawPixel([{x:70,y:90}])
+undefined
+drawPixel(coord)
+undefined
+drawPixel([{x:70,y:90}])
+undefined
+function clear(){
+	listPixel = [];
+}
+undefined
+function clear(){
+	listPixel = [];
+	svg.selectAll("rect").remove()
+}
+undefined
+clear()
+undefined
+drawPixel([{x:70,y:90}])
+undefined
+drawPixel(coord)
+undefined
+clear()
+undefined
+drawPixel([{x:70,y:90}])
+undefined
+
+</script>
+
+</html>
