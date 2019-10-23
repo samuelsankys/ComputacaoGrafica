@@ -241,12 +241,12 @@
 									<div class="col-sm-5">
 										<div class="form-group">
 											<label>Position x</label>
-											<input type="text" id="x1" class=" form-control form-control-sm"
+											<input type="text" id="xcentre" class=" form-control form-control-sm"
 												placeholder="X do centro">
 										</div>
 										<div class="form-group">
 											<label>Position y</label>
-											<input type="text" id="y1" class="form-control form-control-sm"
+											<input type="text" id="ycentre" class="form-control form-control-sm"
 												placeholder="Y do centro">
 									</div>
 									</div>
@@ -337,26 +337,39 @@
 
 
 	function midPointCircleDraw() {
-		var x_centre = parseInt(document.getElementById("x1").value)
-		var y_centre = parseInt(document.getElementById("y1").value)
+		var x_centre = parseInt(document.getElementById("xcentre").value)
+		var y_centre = parseInt(document.getElementById("ycentre").value)
 		var r = parseInt(document.getElementById("r1").value)
-
+		console.log('r')
+		console.log(r)
+		console.log('y_centre')
+		console.log(y_centre)
+		console.log('x_centre')
+		console.log(x_centre)
 		var x = r, y = 0;
 		var a, b, c, d, e, f, g, h;
 
 		a = x + x_centre;
+		console.log(a)
 		b = y + y_centre;
+		console.log(b)
 		CirclePoints4(a, b);
 		
 		if (r > 0) {
 			a = x + x_centre;
+			console.log(a)
 			b = -y + y_centre;
+			console.log(b)
 			CirclePoints4(a, b);
 			c = y + x_centre;
+			console.log(c)
 			d = x + y_centre;
+			console.log(d)
 			CirclePoints4(c, d);
 			e = -y + x_centre;
+			console.log(e)
 			f = x + y_centre;
+			console.log(f)
 			CirclePoints4(e, f);
 		}
 		var P = 1 - r;
